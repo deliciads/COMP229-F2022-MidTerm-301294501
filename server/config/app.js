@@ -1,3 +1,9 @@
+/*
+File name: COMP229-F2022-MidTerm-301294501
+Author's name: Delicia Dsouza
+Student id: 301294501
+*/
+
 // moddules for node and express
 let createError = require("http-errors");
 let express = require("express");
@@ -42,10 +48,6 @@ app.use(express.static(path.join(__dirname, "../../node_modules")));
 // route redirects
 app.use("/", index);
 app.use("/cars", cars);
-
-/*
-
-*/
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
