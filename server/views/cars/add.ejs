@@ -1,0 +1,54 @@
+<%- include ../partials/header.ejs %>
+
+<!-- Content for the Add page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="post">
+                <div class="form-group">
+                    <label for="carnameTextField">Car name</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="Enter car name"
+                    name="carname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="categoryTextField">Category</label>
+                    <input type="text" class="form-control"
+                    id="categoryTextField"
+                    placeholder="Enter category"
+                    name="category" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="carmodelTextField">Car Model</label>
+                    <input type="text" class="form-control"
+                    id="carmodelTextField"
+                    placeholder="Enter car model"
+                    name="carmodel" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="priceTextField">Price</label>
+                    <input type="text" class="form-control"
+                    id="priceTextField"
+                    placeholder="Enter price"
+                    name="price" required>
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/cars" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div> 
+
+<%- include ../partials/footer.ejs %>

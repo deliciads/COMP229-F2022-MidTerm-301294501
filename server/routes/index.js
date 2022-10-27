@@ -4,7 +4,7 @@ let router = express.Router();
 let mongoose = require("mongoose");
 
 // define the game model
-let car = require("../models/cars");
+let Car = require("../models/cars");
 
 /* GET home page. wildcard */
 router.get("/", (req, res, next) => {

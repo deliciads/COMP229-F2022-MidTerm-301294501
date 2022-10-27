@@ -1,16 +1,18 @@
+let express = require("express");
+let router = express.Router();
 let mongoose = require("mongoose");
 
 // create a model class
-let Car = mongoose.Schema(
+let carModel = mongoose.Schema(
   {
-    Carname: String,
-    Category: String,
-    Carmodel: String,
-    Price: Number,
+    carname: String,
+    category: String,
+    carmodel: String,
+    price: Number,
   },
   {
     collection: "cars",
   }
 );
 
-module.exports = mongoose.model("Car", Car);
+module.exports = mongoose.model("Car", carModel);

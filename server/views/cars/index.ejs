@@ -8,48 +8,47 @@
       <!-- ------------------------ -->
       <!-- FIX THE ADD BUTTON BELOW -->
       <!-- ------------------------ -->
-      <a href="" class="btn btn-primary"
-        ><i class="fa fa-plus"></i> Add a car</a
-      >
-      <br />
+      <a href="/cars/add" class="btn btn-primary" role="button"
+        ><i class="fa fa-plus"></i> Add a car</a>
+
+      <br/>
       <div class="table-responsive">
         <table class="table table-bordered table-striped table-hover">
           <thead>
             <tr>
-              <th>Car Name</th>
+              <th class="text-center">Car Name</th>
               <th class="text-center">Car Model</th>
               <th class="text-center">Category</th>
               <th class="text-center">Price</th>
               <th class="text-center"></th>
-               </tr>
+              <th class="text-center"></th>
+            </tr>
           </thead>
           <tbody>
-            <!-- Template Row -->
-            <% for (let count = 0; count < cars.length; count++) { %>
-            <tr>
-              <td><%= cars[count].Carname %></td>
 
-              <td class="text-center"><%= cars[count].Category %></td>
-              <td class="text-center"><%= cars[count].Carmodel %></td>
-              <td class="text-center"><%= cars[count].Price %></td>
+            <!-- Template Row -->
+            <% for (let count = 0; count < Cars.length; count++) { %>
+            <tr>
+              <td class="text-center"><%= Cars[count].carname %></td>
+              <td class="text-center"><%= Cars[count].category %></td>
+              <td class="text-center"><%= Cars[count].carmodel %></td>
+              <td class="text-center"><%= Cars[count].price %></td>
 
               <td class="text-center">
-                <!-- ------------------------ -->
-                <!-- ADD the EDIT BUTTON HERE -->
-                <!-- ------------------------ -->
+                <a href="/cars/details/<%= Cars[count]._id %>" class="btn btn-primary btn-sm">
+                <i class="fas fa-pencil-alt"></i> Edit</a>
               </td>
-
-              
+              <td class="text-center col-1">
+                <a href="/cars/delete/<%= Cars[count]._id %>" class="btn btn-warning btn-sm">
+                <i class="fas fa-trash"></i> Delete</a>
+              </td>
             </tr>
             <% } %>
           </tbody>
         </table>
       </div>
-      <!-- ------------------------ -->
-                <!--FIX the DELETE BUTTON HERE -->
-                <!-- ------------------------ -->
-      <a href="" class="btn btn-warning btn-sm">
-        <i class="fas fa-trash"></i> Delete</a>
+     
+     
     </main>
       <div class="col-md-offset-1 col-md-10 text-center">
         <ul class="pagination pagination-lg pager" id="myPager"></ul>
